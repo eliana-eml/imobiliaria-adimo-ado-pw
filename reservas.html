@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-reservas.css">
+    <link rel="stylesheet" href="./css/style-cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <title>ADIMO - Reservas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-menu">
+            <div class="navbar-logo">
+                <a href="./index-atendente.html"><i class='bx bx-building-house'></i></a>
+                <p>Imobiliária ADIMO</p>
+            </div>
+            
+            
+
+            <div class="menu-bar-icon">
+                <i class='bx bx-menu' onclick="openNav()"></i>
+            </div>
+
+            <div id="nav-mobile-lista" class="nav-mobile-lista">
+                <ul>
+                    <li class="nav-menu-mobile">
+                        <a>
+                            <i class='bx bx-x menu_link' onclick="closeNav()" id="closeBtn">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-menu-mobile">
+                        <a href="./index-atendente.html" class="menu_link" onclick="closeNav()">
+                            <i class='bx bx-home'></i>
+                            <p>Home</p>
+                        </a>
+                    </li>
+                    <li class="nav-menu-mobile">
+                        <a href="./cadastro-cliente.html" class="menu_link" onclick="closeNav()">
+                            <i class='bx bxs-user-detail'></i>
+                            <p>Cadastro de Clientes</p>
+                        </a>
+                    </li>
+                    <li class="nav-menu-mobile">
+                        <a href="./reservas.html" class="menu_link" onclick="closeNav()">
+                            <i class='bx bxs-spreadsheet'></i>
+                            <p>Reservas</p>
+                        </a>
+                    </li>
+                    <li class="nav-menu-mobile">
+                        <a href="./login.html" class="menu_link" onclick="closeNav()">
+                            <i class='bx bxs-user'></i>
+                            <p>Atendente</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+
+            <div class="navbar-links">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="./index-atendente.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./cadastro-cliente.html" class="nav-link">Cadastro de Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./reservas.html" class="nav-link">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./login.html" class="usuario">
+                            <i class='bx bxs-user'></i>
+                            <p>Atendente</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="principal">
+            <h2>Reservas</h2>
+
+            <div class="reserva">
+                <div class="card-imovel-escolhido">
+                    <div class="titulo-imagem">
+                        <h3>Apartamento em Ilhabela - SP</h3>
+                        <img src="./img/imovel7.jpg" alt="Imagem Imóvel" class="imagem-imovel">
+                    </div>
+
+                    <div class="descricao-imovel">
+                        <h4>Descrição:</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <ul>
+                            <li>Localização: Ilhabela - SP</li>
+                            <li>Quantidade de Quartos: 3</li>
+                            <li>Sala de Estar: Sim</li>
+                            <li>Cozinha: Sim</li>
+                            <li>Área de Serviço: Sim</li>
+                            <li>Vagas Garagem: 2</li>
+                        </ul>
+                        <div class="valor-imovel">
+                            <p>Valor:</p>
+                            <p class="valor">R$ 2.000,00 Mensais</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <form class="formulario-reserva">
+                        <div class="dados-reserva">
+                            <fieldset class="campo-dados-basicos">
+
+                                <div class="titulo-campo">
+                                    <i class='bx bxs-user-detail'></i>
+                                    <h3>Dados Cliente</h3>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" name="nome" id="nome" placeholder="Ex.: João Silva" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="nome">E-mail:</label>
+                                    <input type="email" name="email" id="email" placeholder="cliente@gmail.com"
+                                        required>
+                                </div>
+                                <div class="campo">
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" name="telefone" id="telefone" placeholder="(11) 9 0000-0000"
+                                        required>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="campo-dados-locacao">
+
+                                <div class="titulo-campo">
+                                    <i class='bx bx-calendar'></i>
+                                    <h3>Período da Locação</h3>
+                                </div>
+
+                                <div class="periodo-locacao">
+                                    <div class="campo">
+                                        <label for="data-inicio">Data Início:</label>
+                                        <input type="date" name="data-inicio" id="data-inicio">
+                                    </div>
+
+                                    <div class="campo">
+                                        <label for="data-fim">Data Fim:</label>
+                                        <input type="date" name="data-fim" id="data-fim">
+                                    </div>
+                                </div>
+
+                                <div class="titulo-campo">
+                                    <i class='bx bx-credit-card'></i>
+                                    <h3>Dados para Pagamento</h3>
+                                </div>
+
+                                <div class="nome-numero">
+                                    <div class="campo">
+                                        <label for="nome-titular">Nome Títular:</label>
+                                        <input type="text" name="nome-titular" id="nome-titular"
+                                            placeholder="Ex.: João Silva" required>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="numero-cartao">Número Cartão:</label>
+                                        <input type="text" name="numero-cartao" id="numero-cartao"
+                                            placeholder="0000 0000 0000 0000" required>
+                                    </div>
+                                </div>
+
+                                <div class="cvv-validade">
+                                    <div class="campo">
+                                        <label for="numero-cvv">CVV:</label>
+                                        <input type="number" name="numero-cvv" id="numero-cvv" placeholder="000"
+                                            required>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="data-validade-cartao">Data Validade Cartão:</label>
+                                        <input type="month" name="data-validade-cartao" id="data-validade-cartao"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="bandeira-parcelas">
+                                    <div class="campo">
+                                        <label for="bandeira-cartao">Bandeira Cartão:</label>
+                                        <select name="bandeira-cartao" id="bandeira-cartao" required>
+                                            <option>Selecione...</option>
+                                            <option value="master">MasterCard</option>
+                                            <option value="visa">VISA</option>
+                                            <option value="ams">American Express</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="campo">
+                                        <label for="qtd-parcelas">Parcelas:</label>
+                                        <select name="qtd-parcelas" id="qtd-parcelas" required>
+                                            <option>Selecione...</option>
+                                            <option value="1">1x</option>
+                                            <option value="2">2x</option>
+                                            <option value="3">3x</option>
+                                            <option value="4">4x</option>
+                                            <option value="6">6x</option>
+                                            <option value="12">12x</option>
+                                            <option value="24">24x</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
+                        <button class="btn-efetuar-reserva">Efetuar Reserva</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Imobiliária ADIMO 2023</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

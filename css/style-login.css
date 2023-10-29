@@ -1,0 +1,93 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg-madeira.jpg);
+    background-repeat: repeat;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+    width: 450px;
+    height: auto;
+    margin: 80px 100px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > i, 
+.logo > p {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 3px;
+    color: #bb7111;
+}
+
+input {
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 8px;
+    width: 300px;
+    margin: 10px 0;
+    background-color: #f3f3f3;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #11bb3b;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+button > i,
+button > p {
+    font-size: 20px;
+    margin: 0 3px;
+}
+
+@media screen and (max-width: 720px) {
+    .login {
+        width: auto;
+    }
+}

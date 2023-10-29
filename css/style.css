@@ -1,0 +1,298 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/bg-madeira.jpg);
+    background-repeat: repeat;
+}
+
+/* ========= NAV-BAR =========*/
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bb7111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: row;
+    margin: 12px; 
+}
+
+.navbar-logo > a, .navbar-logo > p {
+    color: #FFF;
+    font-size: 20px;
+    margin: 0 3px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar-nav {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.nav-item {
+    margin: 5px 15px;
+    list-style: none;
+}
+
+.usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    color: #FFFFFF;
+}
+
+.usuario > p,
+.usuario > i {
+    margin: 0 5px;
+}
+
+.usuario > p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.nav-link:hover {
+    color: #ffba60;
+}
+
+.bxs-user {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.principal {
+    background-color: #FFFFFF;
+    margin: 65px 10px 10px;
+    padding: 15px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.titulo-pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 60px;
+}
+
+.titulo-pagina > i,
+.titulo-pagina > h2 {
+    font-size: 40px;
+    color: #444444;
+}
+
+h2 {
+    margin: 0 10px;
+}
+
+.cards-imoveis {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f5;
+    height: auto;
+    width: 222px;
+    margin: 10px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-image {
+    height: 200px;
+    width: 300px;
+}
+
+.card-description > ul li, 
+.card > p {
+    font-size: 14px;
+}
+
+.card-description {
+    margin: 15px 0;
+}
+
+.card-availability {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 15px;
+    width: 100%;
+    color: #11bb3b;
+    font-weight: 600;
+}
+
+.card-availability > p,
+.card-availability > i {
+    margin: 0 2px;
+}
+
+.card-btn {
+    background-color: #11bb3b;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    width: 230px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-btn > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu-bar-icon,
+.nav-mobile-lista {
+    display: none;
+}
+
+
+
+footer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #444444;
+    background-color: #FFFFFF;
+    margin: 15px 10px;
+    padding: 15px;
+    border-radius: 5px;
+    height: auto;
+}
+
+
+.nav-mobile-lista {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #bb7111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 1px 0px 2.5px #444444;
+}
+
+.nav-mobile-lista li a {
+    padding: 15px 15px 15px 63px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    
+    align-items: center;
+    transition: 0.3s;
+}
+
+.menu_link > i,
+.menu_link > p {
+    margin: 0 10px 0 0;
+}
+
+.nav-mobile-lista a:hover {
+    color: #ffba60;
+}
+
+.nav-mobile-lista .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+#closeBtn {
+    cursor: pointer;
+    color: var(--bd-pri-cor);
+}
+
+
+@media screen and (max-height: 450px) {
+    .nav-mobile-lista {padding-top: 15px;}
+    .nav-mobile-lista a {font-size: 18px;}
+}
+
+
+@media screen and (max-width: 720px) {
+    .navbar-links {
+     display: none; 
+    }
+
+    .navbar-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-bar-icon {
+        display: block;
+        color: #FFF;
+        font-size: 25px;
+        margin: 0 15px;
+    }
+
+    .titulo-pagina {
+        margin: 10px 0 60px;
+    }
+    
+    .titulo-pagina > i,
+    .titulo-pagina > h2 {
+        font-size: 30px;
+        color: #444444;
+    }
+
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: #FFFFFF;
+        margin: 15px 10px;
+        padding: 15px;
+        border-radius: 5px;
+        height: auto;
+    }
+  }

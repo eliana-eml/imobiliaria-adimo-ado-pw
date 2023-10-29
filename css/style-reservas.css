@@ -1,0 +1,153 @@
+.reserva {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card-imovel-escolhido {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.descricao-imovel > ul {
+    margin: 15px;
+}
+
+img {
+    height: 370px;
+    width: 600px;
+    border-radius: 5px;
+}
+
+.descricao-imovel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 50px 5px;
+}
+
+.valor-imovel {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.valor-imovel > p {
+    margin: 0 10px;
+}
+
+.valor {
+    color: #11bb3b;
+}
+
+.titulo-campo {
+    margin: 8px 0;
+}
+
+.dados-reserva {
+    display: flex;
+    justify-content: center;
+}
+
+.dados-reserva > fieldset {
+    width: 47%;
+}
+
+.campo-dados-locacao {
+    border: 1px solid #f3f4f5;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.periodo-locacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.periodo-locacao > div {
+    width: 50%;
+}
+
+input[type="date"] {
+    border: 1px solid #f3f4f5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nome-numero,
+.cvv-validade,
+.bandeira-parcelas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome-numero > div,
+.cvv-validade > div,
+.bandeira-parcelas > div {
+    width: 50%;
+}
+
+.btn-efetuar-reserva {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #11bb3b;
+    color: #FFF;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1040px) {
+    .card-imovel-escolhido {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .descricao-imovel {
+        margin: 0;
+        padding: 8px;
+        text-align: justify;
+    }
+
+    .valor-imovel {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .dados-reserva,
+    .periodo-locacao,
+    .nome-numero,
+    .cvv-validade,
+    .bandeira-parcelas {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .periodo-locacao > div,
+    .nome-numero > div,
+    .cvv-validade > div,
+    .bandeira-parcelas > div {
+        width: auto;
+    }
+
+    .dados-reserva > fieldset {
+        width: auto;
+    }
+}

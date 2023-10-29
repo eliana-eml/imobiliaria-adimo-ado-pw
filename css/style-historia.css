@@ -1,0 +1,8 @@
+.historia-empresa {
+    margin: 10px;
+}
+
+.historia-empresa > p {
+    margin: 15px 0;
+    text-align: justify;
+}

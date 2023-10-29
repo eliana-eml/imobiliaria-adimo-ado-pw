@@ -1,0 +1,128 @@
+fieldset {
+    border: none;
+    margin: 15px 10px;
+}
+
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dados-cadastrais {
+    display: grid;
+    grid-template-areas: 'dados-basicos endereco';
+}
+
+.campo-dados-basicos {
+    grid-area:'dados-basicos';
+}
+
+.campo-endereco {
+    grid-area:'endereco';
+}
+
+.campo-dados-basicos, 
+.campo-endereco {
+    /* background-color: wheat; */
+    border: 1px solid #f3f4f5;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.titulo-campo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-campo > h3,
+.titulo-campo > i {
+    margin: 0 5px;
+}
+
+.titulo-campo > i {
+    font-size: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+input {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #f3f4f5;
+}
+
+select {
+    border: 1px solid #f3f4f5;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="date"] {
+    border: 1px solid #f3f4f5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.numero-cep, 
+.bairro-cidade {
+    display: flex;
+}
+
+.numero-cep > div,
+.bairro-cidade > div {
+    width: 50%;
+}
+
+.btn-cadastrar {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #11bb3b;
+    color: #FFF;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 840px) {
+
+    .navbar-links {
+        display: none; 
+       }
+   
+       .navbar-menu {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+   
+       .menu-bar-icon {
+           display: block;
+           color: #FFF;
+           font-size: 25px;
+           margin: 0 15px;
+       }
+
+    .dados-cadastrais {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .numero-cep, 
+    .bairro-cidade {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .numero-cep > div,
+    .bairro-cidade > div {
+        width: auto;
+    }
+}
