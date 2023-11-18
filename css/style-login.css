@@ -72,6 +72,7 @@ button {
     align-items: center;
 
     margin: 20px 0;
+    width: 300px;
     border: none;
     border-radius: 5px;
     padding: 10px;

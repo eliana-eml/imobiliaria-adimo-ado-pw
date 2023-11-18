@@ -9,3 +9,18 @@ function closeNav() {
 function alertReserva() {
     alert("Imóvel adicionado à carteira de imóveis!");
 }
+
+function alertLoginSucesso() {
+
+    let usuario = document.getElementById("usuario-email").value;
+    let senha = document.getElementById("usuario-senha").value;
+
+    if (usuario != "" && senha != "") {
+        alert("Login efetuado com sucesso! Seja bem-vindo(a)!");
+        window.location.href = "./index-atendente.html";
+
+    } else {
+        alert("Preencha os campos de usuário e senha!");
+    }
+
+}
