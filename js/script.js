@@ -17,7 +17,7 @@ function alertLoginSucesso() {
 
     if (usuario != "" && senha != "") {
         alert("Login efetuado com sucesso! Seja bem-vindo(a)!");
-        window.location.href = "./index-atendente.html";
+        window.location.href = "../index.html";
 
     } else {
         alert("Preencha os campos de usuário e senha!");

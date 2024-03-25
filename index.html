@@ -5,71 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-cliente.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <title>ADIMO - Tela Inicial Cliente</title>
+    <title>ADIMO - Tela Inicial Atendente</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar-menu">
             <div class="navbar-logo">
-                <a href="./index-atendente.html"><i class='bx bx-building-house'></i></a>
+                <a href="./index.html"><i class='bx bx-building-house'></i></a>
                 <p>Imobiliária ADIMO</p>
             </div>
-            
-            <div class="menu-bar-icon">
-                <i class='bx bx-menu' onclick="openNav()"></i>
-            </div>
 
-            <div id="nav-mobile-lista" class="nav-mobile-lista">
-                <ul>
-                    <li class="nav-menu-mobile">
-                        <a>
-                            <i class='bx bx-x menu_link' onclick="closeNav()" id="closeBtn">
-                            </i>
-                        </a>
-                    </li>
-                    <li class="nav-menu-mobile">
-                        <a href="./index-cliente.html" class="menu_link" onclick="closeNav()">
-                            <i class='bx bx-home'></i>
-                            <p>Home</p>
-                        </a>
-                    </li>
-                    <li class="nav-menu-mobile">
-                        <a href="./historia.html" class="menu_link" onclick="closeNav()">
-                            <i class='bx bxs-user-detail'></i>
-                            <p>História</p>
-                        </a>
-                    </li>
-                    <li class="nav-menu-mobile">
-                        <a href="./login.html" class="menu_link" onclick="closeNav()">
-                            <i class='bx bxs-user'></i>
-                            <p>Cliente</p>
-                        </a>
-                    </li>
-                </ul>
+            <div id="side-menu" class="side-menu">
+
+                <div class="menu-bar-icon">
+                    <i class='bx bx-menu' onclick="openNav()"></i>
+                </div>
+
+                <div id="nav-mobile-lista" class="nav-mobile-lista">
+                    <ul>
+                        <li class="nav-menu-mobile">
+                            <a>
+                                <i class='bx bx-x menu_link' onclick="closeNav()" id="closeBtn">
+                                </i>
+                            </a>
+                        </li>
+                        <li class="nav-menu-mobile">
+                            <a href="#bd-top" class="menu_link" onclick="closeNav()">
+                                <i class='bx bx-home'></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="nav-menu-mobile">
+                            <a href="./pages/cadastro-cliente.html" class="menu_link" onclick="closeNav()">
+                                <i class='bx bxs-user-detail'></i>
+                                <p>Cadastro de Clientes</p>
+                            </a>
+                        </li>
+                        <li class="nav-menu-mobile">
+                            <a href="./pages/reservas.html" class="menu_link" onclick="closeNav()">
+                                <i class='bx bxs-spreadsheet'></i>
+                                <p>Reservas</p>
+                            </a>
+                        </li>
+                        <li class="nav-menu-mobile">
+                            <a href="./pages/login.html" class="menu_link" onclick="closeNav()">
+                                <i class='bx bxs-user'></i>
+                                <p>Atendente</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-        </div>  
 
 
             <div class="navbar-links">
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="./index-cliente.html" class="nav-link">Home</a>
+                        <a href="./pages/index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./historia.html" class="nav-link">História</a>
+                        <a href="./pages/cadastro-cliente.html" class="nav-link">Cadastro de Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./login.html" class="usuario">
+                        <a href="./pages/reservas.html" class="nav-link">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/login.html" class="usuario">
                             <i class='bx bxs-user'></i>
-                            <p>Cliente</p>
+                            <p>Atendente</p>
                         </a>
                     </li>
                 </ul>
@@ -77,14 +88,16 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="main" id="bd-top">
         <div class="principal">
+
             <div class="titulo-pagina">
                 <i class='bx bx-building-house'></i>
                 <h2>Imobiliária ADIMO</h2>
             </div>
 
-            <h2>Catálogo de Imóveis</h2>
+            <h2>Imóveis</h2>
+
             <div class="cards-imoveis">
                 <div class="card">
                     <h3 class="card-title">Apartamento Ipanema</h3>
@@ -104,8 +117,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -127,8 +140,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -150,8 +163,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -173,8 +186,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -196,8 +209,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -219,8 +232,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -242,8 +255,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
 
@@ -265,8 +278,8 @@
                         <p>Disponível para Locação</p>
                         <i class='bx bxs-badge-check'></i>
                     </div>
-                    <a href="./login.html">
-                        <button class="card-btn">Reservar</button>
+                    <a href="./pages/reservas.html">
+                        <button class="card-btn" onclick="alertReserva()">Reservar</button>
                     </a>
                 </div>
             </div>
